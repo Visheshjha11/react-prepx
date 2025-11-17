@@ -25,9 +25,10 @@ export default function Header() {
           {/* Navigation */}
           <nav className="nav" id="primaryNav">
             <Link to="/modules" className="nav-item">Modules</Link>
-            <a href="#solutions" className="nav-item">Solutions</a>
+            <Link to="/about" className="nav-item">About Us</Link>
             <Link to="/resources" className="nav-item">Resources</Link>
             <Link to="/contact" className="nav-item">Contact Us</Link>
+            
           </nav>
 
           {/* Auth Buttons */}
