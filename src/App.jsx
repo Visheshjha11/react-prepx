@@ -7,7 +7,7 @@ import Hero from "./components/Hero";
 import Modal from "./components/Modal";
 import Features from "./components/Features";
 import Footer from "./components/Footer";
-import BackToTop from "./components/BackToTop";
+// import BackToTop from "./components/BackToTop";
 
 import Contact from "./pages/Contact";
 import About from "./pages/About";
