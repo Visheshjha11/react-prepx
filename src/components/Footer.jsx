@@ -33,7 +33,7 @@ export default function Footer() {
             <h3>Product</h3>
             <ul>
               <li><a href="#features">Features</a></li>
-              <li><Link to="/about">About Us</Link></li>   {/* FIXED */}
+              <li><Link to="/about">About Us</Link></li>
               <li><a href="#security">Security</a></li>
               <li><a href="#integrations">Integrations</a></li>
             </ul>
@@ -54,8 +54,8 @@ export default function Footer() {
           <div className="footer-column">
             <h3>Support</h3>
             <ul>
-              <li><Link to="/about">About Us</Link></li> {/* FIXED */}
-              <li><Link to="/contact">Contact Us</Link></li> {/* FIXED */}
+              <li><Link to="/about">About Us</Link></li>
+              <li><Link to="/contact">Contact Us</Link></li>
               <li><a href="#">Help Center</a></li>
               <li><a href="#">Documentation</a></li>
             </ul>
@@ -66,10 +66,11 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="footer-bottom">
           <p>© 2025 Prepx. All rights reserved.</p>
+
           <div className="footer-links">
-            <Link to="/login">Log In</Link> {/* FIXED */}
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Service</a>
+            <Link to="/login">Log In</Link>
+            <Link to="/privacy">Privacy Policy</Link>
+            <Link to="/terms">Terms of Service</Link>
             <a href="#">Cookie Policy</a>
           </div>
         </div>
