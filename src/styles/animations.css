@@ -1,0 +1,58 @@
+/* ==========================
+   ANIMATIONS.CSS
+   Scroll animations, header hide/show, reduced motion
+   ========================== */
+
+/* Animate-in Base */
+.feature-card,
+.pricing-card,
+.cta-card,
+.hero-content,
+.section-title {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.feature-card.animate-in,
+.pricing-card.animate-in,
+.cta-card.animate-in,
+.hero-content.animate-in,
+.section-title.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Header Scroll Effects */
+.header {
+  transition: all 0.3s ease;
+}
+
+.header.scrolled {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+.header.header-hidden {
+  transform: translateY(-100%);
+}
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .feature-card,
+  .pricing-card,
+  .cta-card,
+  .hero-content,
+  .section-title {
+    transition: none;
+  }
+}
