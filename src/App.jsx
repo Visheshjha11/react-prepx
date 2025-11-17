@@ -16,13 +16,13 @@ import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
 
 import useMobileMenu from "./hooks/useMobileMenu";
-import useBackToTop from "./hooks/useBackToTop";
+// import useBackToTop from "./hooks/useBackToTop";
 import useScrollAnimation from "./hooks/useScrollAnimation";
 import useSmoothScroll from "./hooks/useSmoothScroll";
 
 function App() {
   useMobileMenu();
-  useBackToTop();
+  // useBackToTop();
   useScrollAnimation();
   useSmoothScroll();
 
