@@ -1,12 +1,16 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";  // ✅ ADDED
 import "../styles/auth.css";
 
 export default function Auth() {
+  const navigate = useNavigate(); // ✅ ADDED
+
   const [tab, setTab] = useState("signin");
   const [showPassword, setShowPassword] = useState(false);
   const [showSignupPassword, setShowSignupPassword] = useState(false);
 
   // Restore remembered email
+  const [email, setEmail] = useState("");
   useEffect(() => {
     const saved = localStorage.getItem("prepx:lastEmail");
     if (saved) setEmail(saved);
@@ -22,7 +26,6 @@ export default function Auth() {
     localStorage.setItem("prepx:users", JSON.stringify(users));
   };
 
-  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const [signupData, setSignupData] = useState({
@@ -36,6 +39,7 @@ export default function Auth() {
     setTab(value);
   };
 
+  // ✅ FIXED LOGIN REDIRECT
   const handleLogin = (e) => {
     e.preventDefault();
 
@@ -47,13 +51,16 @@ export default function Auth() {
       setTab("signup");
       return;
     }
+
     if (user.password !== password) {
       alert("Incorrect password.");
       return;
     }
 
     localStorage.setItem("prepx:lastEmail", email);
+
     alert(`Welcome back, ${user.name}!`);
+    navigate("/"); // ✅ REDIRECT TO HOME PAGE
   };
 
   const handleSignup = (e) => {
@@ -114,7 +121,7 @@ export default function Auth() {
             </button>
           </div>
 
-          {/* HEADINGS */}
+          {/* Headings */}
           <h1 className="auth-title">
             {tab === "signin" ? "Welcome back" : "Create your account"}
           </h1>
@@ -242,7 +249,6 @@ export default function Auth() {
               <button className="btn-primary">Create Account</button>
             </form>
           )}
-
         </section>
 
       </div>
