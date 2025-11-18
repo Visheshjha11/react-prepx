@@ -98,22 +98,22 @@ export default function About() {
             {/* Member 3 */}
             <div className="about-team-card">
               <div className="about-avatar">N</div>
-              <h3 className="team-name">Naveen</h3>
+              <h3 className="team-name">Milan Singla</h3>
               <p className="team-role">Team Member</p>
               <p className="team-desc">
-                Focuses on user experience, interface consistency, and product
-                scalability.
+              Ensures platform stability, testing workflow reliability, and
+              seamless organization experience.
               </p>
             </div>
 
             {/* Member 4 */}
             <div className="about-team-card">
               <div className="about-avatar">M</div>
-              <h3 className="team-name">Milan</h3>
+              <h3 className="team-name">Naveen</h3>
               <p className="team-role">Team Member</p>
               <p className="team-desc">
-                Ensures platform stability, testing workflow reliability, and
-                seamless organization experience.
+              Focuses on user experience, interface consistency, and product
+              scalability.
               </p>
             </div>
 

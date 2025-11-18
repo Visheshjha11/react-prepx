@@ -26,16 +26,20 @@ export default function Header() {
           <nav className="nav" id="primaryNav">
             <Link to="/modules" className="nav-item">Modules</Link>
             <Link to="/about" className="nav-item">About Us</Link>
-            <Link to="/resources" className="nav-item">Resources</Link>
-            <Link to="/contact" className="nav-item">Contact Us</Link>
+
+            {/* ❌ REMOVE: /resources (route does NOT exist)
+                If you need it, create /resources page later */}
             
+            <Link to="/contact" className="nav-item">Contact Us</Link>
           </nav>
 
           {/* Auth Buttons */}
           <div className="header-buttons">
             <div className="student-access">
               <span>Student Access</span>
-              <button className="access-btn">
+
+              {/* Make it open login */}
+              <Link to="/login" className="access-btn">
                 <svg
                   width="16"
                   height="16"
@@ -50,7 +54,7 @@ export default function Header() {
                     d="M13 7l5 5m0 0l-5 5m5-5H6"
                   />
                 </svg>
-              </button>
+              </Link>
             </div>
 
             <div className="auth-buttons">

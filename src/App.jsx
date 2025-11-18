@@ -7,7 +7,6 @@ import Hero from "./components/Hero";
 import Modal from "./components/Modal";
 import Features from "./components/Features";
 import Footer from "./components/Footer";
-// import BackToTop from "./components/BackToTop";
 
 import Contact from "./pages/Contact";
 import About from "./pages/About";
@@ -16,27 +15,25 @@ import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
 
 import useMobileMenu from "./hooks/useMobileMenu";
-// import useBackToTop from "./hooks/useBackToTop";
 import useScrollAnimation from "./hooks/useScrollAnimation";
 import useSmoothScroll from "./hooks/useSmoothScroll";
 
 function App() {
-  useMobileMenu();
-  // useBackToTop();
-  useScrollAnimation();
-  useSmoothScroll();
-
   const location = useLocation();
 
-  // ✅ Hide layout on these pages
+  // Hide layout on these pages
   const hideLayout =
     location.pathname === "/login" ||
     location.pathname === "/privacy" ||
     location.pathname === "/terms";
 
+  // ALWAYS call hooks, pass enabled flag
+  useMobileMenu(!hideLayout);
+  useScrollAnimation(!hideLayout);
+  useSmoothScroll(!hideLayout);
+
   return (
     <>
-      {/* Hide Header on login/privacy/terms */}
       {!hideLayout && <Header />}
 
       <main id="mainContent">
@@ -61,9 +58,7 @@ function App() {
         </Routes>
       </main>
 
-      {/* Hide Footer on login/privacy/terms */}
       {!hideLayout && <Footer />}
-      {/* {!hideLayout && <BackToTop />} */}
     </>
   );
 }

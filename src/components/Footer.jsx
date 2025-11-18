@@ -22,9 +22,9 @@ export default function Footer() {
             </p>
 
             <div className="social-links">
-              <a href="#" className="social-link">f</a>
-              <a href="#" className="social-link">t</a>
-              <a href="#" className="social-link">in</a>
+              <a href="https://facebook.com" className="social-link">f</a>
+              <a href="https://twitter.com" className="social-link">t</a>
+              <a href="https://linkedin.com" className="social-link">in</a>
             </div>
           </div>
 
@@ -32,10 +32,11 @@ export default function Footer() {
           <div className="footer-column">
             <h3>Product</h3>
             <ul>
-              <li><a href="#features">Features</a></li>
+              {/* Home page anchors are safe – no reload */}
+              <li><a href="/#features">Features</a></li>
               <li><Link to="/about">About Us</Link></li>
-              <li><a href="#security">Security</a></li>
-              <li><a href="#integrations">Integrations</a></li>
+              <li><a href="/#security">Security</a></li>
+              <li><a href="/#integrations">Integrations</a></li>
             </ul>
           </div>
 
@@ -43,10 +44,10 @@ export default function Footer() {
           <div className="footer-column">
             <h3>Solutions</h3>
             <ul>
-              <li><a href="#">Schools</a></li>
-              <li><a href="#">Universities</a></li>
-              <li><a href="#">Corporate Training</a></li>
-              <li><a href="#">Certification</a></li>
+              <li><Link to="/solutions/schools">Schools</Link></li>
+              <li><Link to="/solutions/universities">Universities</Link></li>
+              <li><Link to="/solutions/corporate">Corporate Training</Link></li>
+              <li><Link to="/solutions/certification">Certification</Link></li>
             </ul>
           </div>
 
@@ -56,8 +57,8 @@ export default function Footer() {
             <ul>
               <li><Link to="/about">About Us</Link></li>
               <li><Link to="/contact">Contact Us</Link></li>
-              <li><a href="#">Help Center</a></li>
-              <li><a href="#">Documentation</a></li>
+              <li><Link to="/help">Help Center</Link></li>
+              <li><Link to="/documentation">Documentation</Link></li>
             </ul>
           </div>
 
@@ -71,7 +72,7 @@ export default function Footer() {
             <Link to="/login">Log In</Link>
             <Link to="/privacy">Privacy Policy</Link>
             <Link to="/terms">Terms of Service</Link>
-            <a href="#">Cookie Policy</a>
+            <Link to="/cookies">Cookie Policy</Link>
           </div>
         </div>
 

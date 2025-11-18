@@ -1,55 +1,69 @@
-/* PAGE WRAPPER */
+/* =========================================================
+   ABOUT PAGE — FINAL VERSION (Matches Landing Hero Exactly)
+   ========================================================= */
+
+/* =============== PAGE WRAPPER =============== */
 .about-page {
   width: 100%;
   overflow-x: hidden;
-  color: #fff;
-  background: #000d2a;
+  color: #111827;
+  background: #ffffff;
   font-family: "Inter", sans-serif;
 }
 
-/* -------------------- HERO -------------------- */
+/* =========================================================
+   HERO — Perfectly Matched to Landing Page
+   ========================================================= */
 .about-hero {
   padding: 6rem 0;
-  background: linear-gradient(135deg, #000a1f, #001744);
+  background: var(--gradient-hero);     /* SAME as Landing Page */
   text-align: center;
+  color: var(--hero-text);
 }
 
 .about-hero-content {
   max-width: 800px;
-  margin: auto;
+  margin: 0 auto;
 }
 
 .about-hero-badge {
   display: inline-block;
-  background: rgba(255,255,255,0.08);
-  padding: 8px 18px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.5rem 1rem;
   border-radius: 999px;
   font-size: 0.9rem;
   margin-bottom: 1.5rem;
+  color: #ffffff;
+  backdrop-filter: blur(10px);
 }
 
 .about-hero-title {
-  font-size: 3rem;
+  font-size: 3.4rem;
   font-weight: 800;
-  line-height: 1.2;
+  line-height: 1.15;
+  margin-bottom: 1.4rem;
+  color: var(--hero-text);
 }
 
 .about-gradient-text {
-  background: linear-gradient(90deg, #4f7cff, #9b59ff);
+  background: var(--gradient-primary);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .about-hero-description {
   margin-top: 1rem;
-  max-width: 550px;
+  max-width: 560px;
   margin-left: auto;
   margin-right: auto;
-  color: #a8b3d1;
-  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.15rem;
+  line-height: 1.6;
 }
 
-/* -------------------- CONTENT SECTIONS -------------------- */
+/* =========================================================
+   CONTENT SECTIONS
+   ========================================================= */
 .about-section,
 .about-mission,
 .about-team {
@@ -58,99 +72,132 @@
 
 .about-section {
   background: #ffffff;
-  color: #111;
+  color: #111827;
 }
 
 .about-mission {
-  background: #f8f9ff;
-  color: #111;
-}
-
-.about-team {
-  background: #fff;
+  background: #f9fafb;
+  color: #111827;
 }
 
 /* Headings */
 .about-heading {
-  font-size: 2.4rem;
+  font-size: 3rem;
   font-weight: 700;
   margin-bottom: 1.2rem;
   text-align: center;
+  color: #020617;
 }
 
 /* Paragraph */
 .about-text {
   max-width: 750px;
   margin: 0 auto 1.4rem;
-  color: #555;
+  color: #4b5563;
   line-height: 1.75;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
 }
 
 .about-text.large {
-  font-size: 1.25rem;
+  font-size: 1.2rem;
 }
 
-/* -------------------- TEAM -------------------- */
+/* =========================================================
+   TEAM SECTION
+   ========================================================= */
+.about-team {
+  background: #ffffff;
+  padding: 4.5rem 0 5rem;
+}
+
 .about-team-header {
   text-align: center;
   margin-bottom: 3rem;
 }
 
+.about-team-header .about-heading {
+  margin-bottom: 0.75rem;
+}
+
 .about-subtext {
-  color: #666;
-  font-size: 1.1rem;
+  color: #6b7280;
+  font-size: 1.05rem;
+  max-width: 640px;
+  margin: 0 auto;
 }
 
+/* 2×2 Grid EXACT like your image */
 .about-team-grid {
+  max-width: 1000px;
+  margin: 0 auto;
   display: grid;
-  gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2.5rem;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
 }
 
+/* Mobile = 1 card */
+@media (max-width: 768px) {
+  .about-team-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Beautiful Soft Cards */
 .about-team-card {
-  background: #f4f6ff;
-  padding: 2rem;
+  background: #f5f0ff;
+  padding: 3rem 2.8rem;
+  width: 100%;
+  min-height: 340px;
+  border-radius: 28px;
   text-align: center;
-  border-radius: 16px;
-  transition: 0.3s ease;
-  border: 1px solid #e4e7ff;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  box-shadow: 0 25px 60px rgba(79, 70, 229, 0.12);
+  transition: all 0.25s ease;
 }
 
 .about-team-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+  transform: translateY(-6px);
+  box-shadow: 0 35px 70px rgba(79, 70, 229, 0.22);
+  background: #f2e9ff;
 }
 
-.about-avatar {
-  width: 90px;
-  height: 90px;
-  background: linear-gradient(135deg, #4f7cff, #9b59ff);
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  color: white;
-  font-size: 2rem;
+/* Name */
+.team-name {
+  font-size: 1.7rem;
   font-weight: 700;
-  margin: 0 auto 1rem;
+  margin-bottom: 0.6rem;
+  color: #111827;
 }
 
+/* Role */
 .team-role {
-  color: #4f7cff;
+  color: #7c3aed;
   font-weight: 600;
-  margin-bottom: 0.8rem;
+  margin-bottom: 1.4rem;
+  font-size: 1.05rem;
 }
 
+/* Description */
 .team-desc {
-  color: #555;
-  line-height: 1.6;
-  font-size: 0.95rem;
+  color: #4b5563;
+  line-height: 1.75;
+  font-size: 1.1rem;
+  max-width: 35rem;
+  margin: 0 auto;
 }
 
-/* -------------------- CTA -------------------- */
+/* Avatar hidden */
+.about-avatar {
+  display: none;
+}
+
+/* =========================================================
+   CTA
+   ========================================================= */
 .about-cta {
   padding: 5rem 0;
-  background: linear-gradient(135deg, #4f7cff, #9b59ff);
+  background: linear-gradient(135deg, #4f46e5, #a855f7);
   text-align: center;
   color: white;
 }
@@ -159,20 +206,23 @@
   margin-top: 1.5rem;
   display: inline-block;
   background: white;
-  color: #032384;
+  color: #1d1b4b;
   padding: 12px 28px;
   border-radius: 8px;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   font-weight: 600;
   text-decoration: none;
-  transition: 0.3s ease;
+  transition: 0.25s ease;
 }
 
 .about-cta-btn:hover {
   transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(15, 23, 42, 0.25);
 }
 
-/* -------------------- ANIMATION -------------------- */
+/* =========================================================
+   ANIMATION
+   ========================================================= */
 .fade-up {
   opacity: 0;
   transform: translateY(20px);
